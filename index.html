@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Login Panel</title>
+<title>Tap Panel</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -10,14 +10,24 @@
 
 <div class="panel">
 
-<h2>Login</h2>
+<h1>TAP PANEL</h1>
 
-<input id="gmail" placeholder="Gmail">
+<input id="liveLink" placeholder="Pega el link del live">
+
+<button class="tap" onclick="tap()">TAP x3</button>
+
+<p>Taps enviados: <span id="tapCount">0</span></p>
+
+<hr>
+
+<h3>Login</h3>
+
+<input id="gmail" placeholder="Cuenta">
 <input id="password" type="password" placeholder="Contraseña">
 
 <button onclick="login()">Entrar</button>
 
-<p id="msg"></p>
+<p>Cuentas activas: <span id="active">0</span></p>
 
 </div>
 
