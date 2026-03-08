@@ -1,50 +1,38 @@
 body{
-
-background:#0f0f0f;
+background:#111;
 color:white;
 font-family:Arial;
 display:flex;
 justify-content:center;
 align-items:center;
 height:100vh;
-
 }
 
 .panel{
-
-background:#1e1e1e;
+background:#1c1c1c;
 padding:30px;
 border-radius:10px;
-width:300px;
-box-shadow:0 0 15px black;
-
+width:320px;
 }
 
 input{
-
 width:100%;
 padding:10px;
 margin-top:10px;
-border:none;
 border-radius:5px;
-
+border:none;
 }
 
 button{
-
 width:100%;
 padding:10px;
 margin-top:10px;
-background:#ff0050;
 border:none;
-color:white;
 border-radius:5px;
 cursor:pointer;
-
 }
 
-button:hover{
-
-background:#ff2c70;
-
+.tap{
+background:#ff0050;
+font-size:20px;
 }
