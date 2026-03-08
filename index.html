@@ -1,37 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
 <meta charset="UTF-8">
-<title>Tap Panel</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>IRP TIKTOK TAP</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
 <div class="panel">
 
-<h1>TAP PANEL</h1>
+<h1>IRP TIKTOK TAP</h1>
 
-<input id="liveLink" placeholder="Pega el link del live">
+<input id="live" placeholder="Link del Live">
 
 <button class="tap" onclick="tap()">TAP x3</button>
 
-<p>Taps enviados: <span id="tapCount">0</span></p>
+<div class="stats">
 
-<hr>
-
-<h3>Login</h3>
-
-<input id="gmail" placeholder="Cuenta">
-<input id="password" type="password" placeholder="Contraseña">
-
-<button onclick="login()">Entrar</button>
-
+<p>Taps: <span id="tapCount">0</span></p>
 <p>Cuentas activas: <span id="active">0</span></p>
 
 </div>
 
-<script src="script.js"></script>
+<hr>
+
+<h3>Login Cuenta</h3>
+
+<input id="gmail" placeholder="Cuenta">
+<input id="password" type="password" placeholder="Contraseña">
+
+<button class="login" onclick="login()">Conectar</button>
+
+</div>
+
+<script>
+
+let taps = 0
+let active = 0
+
+function tap(){
+
+taps += 3
+document.getElementById("tapCount").innerText = taps
+
+}
+
+function login(){
+
+let gmail = document.getElementById("gmail").value
+let pass = document.getElementById("password").value
+
+if(gmail && pass){
+
+active++
+document.getElementById("active").innerText = active
+
+}
+
+}
+
+</script>
 
 </body>
 </html>
