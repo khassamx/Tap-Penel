@@ -1,45 +1,28 @@
+let taps = 0
+let active = 0
+
+function tap(){
+
+taps += 3
+
+document.getElementById("tapCount").innerText = taps
+
+}
+
 function login(){
 
 let gmail = document.getElementById("gmail").value
 let pass = document.getElementById("password").value
 
-fetch("/login",{
-method:"POST",
-headers:{
-"Content-Type":"application/json"
-},
-body:JSON.stringify({
-gmail:gmail,
-password:pass
-})
-})
-.then(res=>res.text())
-.then(data=>{
+if(gmail && pass){
 
-if(data=="ok"){
-
-window.location="dashboard.html"
+active += 1
+document.getElementById("active").innerText = active
 
 }else{
 
-document.getElementById("msg").innerText="Login incorrecto"
+alert("Completa los datos")
 
 }
-
-})
-
-}
-
-function openLive(){
-
-let link = document.getElementById("live").value
-window.open(link)
-
-}
-
-function openPost(){
-
-let link = document.getElementById("post").value
-window.open(link)
 
 }
